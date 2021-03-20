@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Man
 
-# Register your models here.
+
+admin.site.register(Man)

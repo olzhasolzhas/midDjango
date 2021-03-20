@@ -1,0 +1,13 @@
+{% extends 'base.html '%}
+
+
+{% block content%}
+<form method="POST">
+	{% csrf_token %}
+	<p>Username{{form.username}}<br></p>
+	<p>Password{{form.password1}}<br></p>
+	<p>Verify password{{form.password2}}<br></p>
+	<input type="submit" value="Register Account">
+    {{form.errors}}
+	<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+{% endblock %}

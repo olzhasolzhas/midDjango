@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+{% for u in user %}
+    <tr style="border-top: 1px solid gray">
+        <p>You are logged in, Info about user</p>
+        <th>{{ u.name }}</th>
+        <th>{{ u.age }}</th>
+        <th>{{ u.bd }}</th>
+    </tr>
+{% endfor %}
+
+
+{% endblock %}
